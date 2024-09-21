@@ -1,16 +1,22 @@
 #include <stdio.h>
 
-
 int main (){
 
-int a=10;
-int b=20;
-int c=30;
- sure face area 2*((l * h) + (w * h) + (l * w))
+ float a,b,c,circumference;
 
-//int area=a+b+c;
+ printf("Enter length of side a:");
+ scanf("%f",&a);
 
-printf("Area of the triangle=%d",area);
+ printf("Enter length of side b:");
+ scanf("%f",&b);
 
+ printf("Enter length of side c:");
+ scanf("%f",&c);
+
+ circumference = a+b+c;
+ printf("\ncircumference of Triangle is %f",circumference);
+
+ return 0;
 }
+
 
