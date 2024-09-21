@@ -2,16 +2,16 @@
 
 int main() {
 
-  int n1,n2,n;
+  int number,reverse=0;
 
   printf("Enter number:");
-  scanf("%d",&n);
+  scanf("%d",&number);
 
-  while(n!=0)
+  while(number !=0)
   {
-      n2 = n % 10;
-      n1 = n1 * 10 +n2;
-      n/=10;
+      number = number % 10;
+      reverse = reverse * 10 + number;
+      number/=10;
   }
-  printf("Reversed number = %d",n1);
+  printf("Reversed number = %d\n",reverse);
 }
