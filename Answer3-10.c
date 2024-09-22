@@ -1,21 +1,25 @@
 #include <stdio.h>
 int main()
 {
-    int num,sum, firstDigit, lastDigit;
+    int number,firstDigit, lastDigit,sum;
 
     printf("Enter number:");
-    scanf("%d", &num);
+    scanf("%d", &number);
 
-    lastDigit = num % 10;
-    firstDigit = num;
+    lastDigit = number % 10;
+    firstDigit = number;
 
-    while(firstDigit >=10)
+    while(number >=10)
     {
-        firstDigit /=10;
+        number = number/10;
     }
+
+      firstDigit = number;
 
       sum = firstDigit + lastDigit;
 
-      printf("sum of first and last digit:%d\n",sum);
+      printf(" The sum of first and last digit:%d\n",sum);
+
+    return 0;
 
 }
