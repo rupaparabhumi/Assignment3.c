@@ -1,36 +1,43 @@
 #include <stdio.h>
-int main(){
-    printf("Accept '2' numbers from user and swap 2 numbers with using '3'rd variable and without using 3rd variable");
-    printf("\n");
-    printf("without using 3rd variable");
-    printf("\n");
 
-    int a,b;
-    printf("Enter a:");
-    scanf("%d ",&a);
+void main()
+{
+    int num1, num2, temp;
 
-    printf("Enter b:");
-    scanf("%d",&b);
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
 
-    a=a+b;
-    b=a-b;
-    a=a-b;
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
 
-    printf("\nAfter swapping a=%d b=%d",a,b);
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
 
-    int c,d,e;
-    printf("\n");
-    printf("with 3rd variable\n");
+    printf("After swapping (with third variable):\n");
+    printf("First number: %d\n", num1);
+    printf("Second number: %d\n", num2);
 
-    printf("Enter c:");
-    scanf("%d",&c);
+// without using 3rd variable
 
-   printf("Enter d:");
-    scanf("%d",&d);
+    printf("\n---without variable---");
+    printf("\nEnter the first number: ");
+    scanf("%d", &num1);
 
-    e = c;
-    c = d;
-    d = e;
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
 
-    printf("After swapping c =%d d=%d",c,d);
-    }
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
+
+    printf("After swapping (without third variable):\n");
+    printf("First number: %d\n", num1);
+    printf("Second number: %d\n", num2);
+}
+
+
+
+    
+
+  
