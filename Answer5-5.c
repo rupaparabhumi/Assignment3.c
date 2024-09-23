@@ -1,30 +1,42 @@
 #include <stdio.h>
-int main() {
+int main()
+{
 
-    char str1[100], str2[100];
-    int i;
+   char str1[50],str2[50];
+    int i,f=0;
 
+    printf("enter first string: ");
+    gets(str1);
 
-    printf("Enter the first string: ");
-    scanf("%s", str1);
+    printf("enter second string: ");
+    gets(str2);
 
-    printf("Enter the second string: ");
-    scanf("%s", str2);
-
-
-    for(i=0; str1[i] == str2[i] && str1[i]=='\0';i++);
-
-
-    if(str1[i]< str2[i])
+    for (i = 0; str1[i] != '\0' && str2[i] != '\0'; i++)
     {
-         printf("The string1 are equal.\n");
-
+        if (str1[i] != str2[i])
+         {
+            f = 1;
+            break;
+        }
     }
 
-    else if(str1[i]> str2[i])
+    if(str1[i] != '\0' && str2[i] != '\0')
     {
-        printf("The string2 are not equal.\n");
+        f=1;
     }
 
-   return 0;
+    if(f == 1)
+    {
+        printf(" The strings are not equal ");
+    }
+    else
+    {
+        printf(" The strings are equal");
+    }
+
+    return 0;
+
 }
+
+
+  
