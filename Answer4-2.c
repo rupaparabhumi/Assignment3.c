@@ -1,61 +1,74 @@
 #include<stdio.h>
 
-   int add(int a,int b)
-   {
-       return a+b;
-   }
-   int sub(int a,int b)
-   {
-       return a-b;
-   }
-   int mul(int a,int b)
-   {
-       return a*b;
-   }
-   int div(int a,int b)
-   {
-       return a/b;
-   }
-   int main()
-   {
-       int num1,num2,opation,result;
-       printf("Enter first number:");
-       scanf("%d",&num1);
+int sum(int, int);
+int sub(int, int);
+int mul(int, int);
+float div(int, int);
+int mod(int, int);
 
-       printf("Enter second number:");
-       scanf("%d",&num2);
+void main()
+{
+    int num1,num2,choice,isRunning=1;
 
-       printf("\n");
+    printf("welcome");
+    printf("\n1. addition");
+    printf("\n2. subtraction");
+    printf("\n3. multiplication");
+    printf("\n4. division");
 
-       printf("1.Addition\n");
-       printf("2.subtraction\n");
-       printf("3.multiplication\n");
-       printf("4.division");
 
-       printf("\n\nchoose any one:");
-       scanf("%d",&opation);
+    printf("\nenter your choice: ");
+    scanf("%d",&choice);
 
-    switch(opation)
-    {
-    case 1	:
-        result=add(num1,num2);
-        printf("Addition = %d",result);
-        break;
-    case 2	:
-        result=sub(num1,num2);
-        printf("subtraction = %d",result);
-        break;
-    case 3	:
-        result=mul(num1,num2);
-        printf("Multiplication = %d",result);
-        break;
-    case 4	:
-        result = div(num1,num2);
-        printf("Division =%d",result);
-        break;
-    default	:
-        printf("invalid chlice");
-        break;
-    }
-    return 0;
+    if (!(choice >= 5 || choice <= 0))
+        {
+            printf("\nEnter first number: ");
+            scanf("%d", &num1);
+            printf("\nEnter second number: ");
+            scanf("%d", &num2);
+        }
+
+    switch (choice)
+        {
+        case 1:
+            printf("Summation of %d and %d is: %d", num1, num2, sum(num1, num2));
+            break;
+        case 2:
+            printf("Subtraction of %d and %d is: %d", num1, num2, sub(num1, num2));
+            break;
+        case 3:
+            printf("Multiplication of %d and %d is: %d", num1, num2, mul(num1, num2));
+            break;
+        case 4:
+            printf("Division of %d and %d is: %.2f", num1, num2, div(num1, num2));
+            break;
+      default:
+            printf("Oops. Wrong input.");
+            break;
+        }
 }
+
+int sum(int n1, int n2)
+{
+    return n1 + n2;
+}
+int sub(int n1, int n2)
+{
+    return n1 - n2;
+}
+int mul(int n1, int n2)
+{
+    return n1 * n2;
+}
+float div(int n1, int n2)
+{
+    return (float)n1 / n2;
+}
+int mod(int n1, int n2)
+{
+    return n1 % n2;
+}
+
+  
+   
+    
