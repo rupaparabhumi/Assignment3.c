@@ -2,22 +2,14 @@
 
 int main()
 {
-  char name[5][20];
-  int i;
 
-   printf("Enter user name\n");
+ char names[5][50];
 
-   for(i=0;i<5;i++)
-   {
-       printf("name %d:",i+1);
-       scanf("%s",name[i]);
-   }
-
-    printf("List of user name:");
-    for(i=0;i<5;i++)
-    {
-        scanf("%s",name[i]);
-    }
-
-    return 0;
+ for (int i=0; i<5;i++)
+ {
+     printf("Enter name %d:",i+1);
+     scanf("%s",names[i]);
+     printf("%s\n", names[i]);
+ }
+  return 0;
 }
